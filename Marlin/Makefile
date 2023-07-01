@@ -59,7 +59,7 @@
 #
 
 # This defines the board to compile for (see boards.h for your board's ID)
-HARDWARE_MOTHERBOARD ?= 1020
+HARDWARE_MOTHERBOARD ?= 1331
 
 ifeq ($(OS),Windows_NT)
   # Windows
@@ -93,7 +93,7 @@ ARDUINO_USER_DIR ?= ${HOME}/Documents/Arduino
 AVR_TOOLS_PATH ?=
 
 # Programmer configuration
-UPLOAD_RATE        ?= 57600
+UPLOAD_RATE        ?= 250000
 AVRDUDE_PROGRAMMER ?= arduino
 # On most linuxes this will be /dev/ttyACM0 or /dev/ttyACM1
 UPLOAD_PORT        ?= /dev/ttyUSB0
@@ -407,6 +407,8 @@ else ifeq ($(HARDWARE_MOTHERBOARD),1327)
 else ifeq ($(HARDWARE_MOTHERBOARD),1328)
 # Mega controller & Protoneer CNC Shield V3.00
 else ifeq ($(HARDWARE_MOTHERBOARD),1329)
+# 
+else ifeq ($(HARDWARE_MOTHERBOARD),1331)
 
 #
 # ATmega1281, ATmega2561
